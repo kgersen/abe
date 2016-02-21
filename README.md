@@ -2,7 +2,8 @@
 
 from: http://source.android.com/source/initializing.html
 
-* Oracle Java JDK 6
+* openjdk-8
+* toolchain
 
 
 #### Install
