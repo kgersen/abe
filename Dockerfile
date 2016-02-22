@@ -10,6 +10,3 @@ RUN apt-get install -y git git-core gnupg flex bison gperf build-essential \
   libgl1-mesa-dev libxml2-utils xsltproc unzip
 
 RUN apt-get install -y joe bc python-networkx openjdk-7-jdk libproc-processtable-perl patchutils mercurial
-
-#RUN apt-get install -y openjdk-8-jdk
-
