@@ -2,7 +2,7 @@
 
 from: http://source.android.com/source/initializing.html
 
-* openjdk-8
+* openjdk-7
 * toolchain
 
 
