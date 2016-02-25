@@ -1,4 +1,4 @@
-### Android source - development environment 
+### Android source - development environment
 
 from: http://source.android.com/source/initializing.html
 
@@ -15,7 +15,7 @@ docker pull kgersen/abe
 ```
 
 ```
-docker run -i -t kgersen/abe /bin/bash
+docker run -it -v /path_to_source:/path_to_source kgersen/abe /bin/bash
 ```
 
 or add it to your Dockerfile:
