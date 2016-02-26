@@ -22,7 +22,7 @@ FROM kgersen/abe
 
 1. create a folder for the source code on your host, for instance:
 
- `/home/user/shield-open-source`
+ `mkdir /home/user/shield-open-source`
 
 2. fetch the instruction page at: https://developer.nvidia.com/shield-open-source (you should end up seeing a text page starting with "Welcome to the SHIELD Open Source + Binary Driver Release"). note the 'repo init -u ...' line
 
@@ -32,10 +32,10 @@ FROM kgersen/abe
 
  `cd /root/shield-open-source`
 
- `repo init -u git:.... (same line noted above)`
+ `repo init -u git:.... (same line as noted in step 2)`
 
  `repo sync -j5`
 
- This will fetch the source code. This can take a very long time. The code will be downloaded in `/root/shield-open-source` inside the container which is `/home/user/shield-open-source` on your host (or whatever folder you used in the step 1)
+ This will fetch the source code. This can take a very long time. The code will be downloaded in `/root/shield-open-source` folder inside the container which is the `/home/user/shield-open-source` folder on your host (or whatever folder you used in the step 1)
 
 4. from there you're set up to build. Do the changes on the source code you want from within your host then follow the "HowTo Build" instructions, inside the container, from the instruction page at NVidia (see step 2).
