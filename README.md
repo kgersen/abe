@@ -1,9 +1,11 @@
 ### Android source - development environment
 
 from: http://source.android.com/source/initializing.html
+and: http://source.android.com/source/downloading.html#installing-repo
 
 * openjdk-7
 * toolchain
+* repo
 
 #### Install
 
@@ -28,7 +30,7 @@ FROM kgersen/abe
 
 3. launch a  container
 
- `docker run -it -v /home/user/shield-open-source:/root/shield-open-source kgersen/abe /bin/bash`
+ `docker run -it --rm --name abe -v /home/user/shield-open-source:/root/shield-open-source kgersen/abe /bin/bash`
 
  `cd /root/shield-open-source`
 
@@ -36,6 +38,6 @@ FROM kgersen/abe
 
  `repo sync -j5`
 
- This will fetch the source code. This can take a very long time. The code will be downloaded in `/root/shield-open-source` folder inside the container which is the `/home/user/shield-open-source` folder on your host (or whatever folder you used in the step 1)
+ This will fetch the source code. This can take a very long time. The code will be downloaded in the `/root/shield-open-source` folder inside the container which is the `/home/user/shield-open-source` folder on your host (or whatever folder you used in the step 1)
 
-4. from there you're set up to build. Do the changes on the source code you want from within your host then follow the "HowTo Build" instructions, inside the container, from the instruction page at NVidia (see step 2).
+4. from there you're set up to build. Do the changes on the source code you want from within your host then follow the "HowTo Build" instructions, inside the container, from the instruction page at NVidia (see step 2). If you quit the command line (exit) from the container it will be destroyed (because of the --rm flag). Just recreate a new one with the same command as in step 3. You can use `ctrl-p + ctrl-q` to detach from it without killing it. Then use `docker attach abe` to reconnect to it.
