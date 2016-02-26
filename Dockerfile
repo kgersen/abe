@@ -11,3 +11,6 @@ RUN apt-get install -y ca-certificates git git-core gnupg \
   libgl1-mesa-dev libxml2-utils xsltproc unzip
 
 RUN apt-get install -y joe bc python-networkx openjdk-7-jdk libproc-processtable-perl patchutils mercurial
+
+RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo \
+ && chmod a+x /usr/local/bin/repo
